@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-preto: #13111d;
+    --cor-branco: #E8FFCE;
+    --cor-azul: #ACFADF;
+    --cor-hover: #94ADD7;
+    --fonte-KronaOne: 'Krona One', sans-serif;
+    --fonte-Montserrat: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--cor-preto);
+    color: rgba(202, 205, 223, 0.739);
+}
+
+
+.Subtitulo {
+    font-size: 1.5rem;
+    font-family: var(--fonte-Montserrat)
+}
+
+.proeficiencias {
+    color: #cae2a5ee;
+}
+
+.proeficiencias:hover {
+    background-color: #48b8f010;
+}
+
+.inicio_titulo {
+    color:var(--cor-branco);
+    font-size: 2.25rem;
+    font-family: var(--fonte-KronaOne);
+}
+
+.cabecalho {
+    padding: 2% 0 0 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__links {
+    font-family: var(--fonte-Montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:var(--cor-azul);
+    text-decoration: none;
+}
+
+.apresentacao {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align:center;
+    gap: 5rem;
+}
+
+.apresentacao__conteudo {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.titulo_destaque {
+    color: var(--cor-azul);
+    font-size: 2.25rem;
+    font-family: var(--fonte-KronaOne);
+}
+
+.apresentacao img {
+    max-width: 33%;
+    height: auto;
+    border: 2px solid var(--cor-azul);
+    filter:saturate(1.4) brightness(0.9) sepia(33%);
+    border-radius: 8px;
+}
+
+.apresentacao__botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__subtitulo {
+    color: var(--cor-branco);
+    font-size: 1.375rem;
+    font-family: var(--fonte-KronaOne);
+    font-weight: 400;
+    position: relative;
+}
+
+.apresentacao__links {
+    /* Ctrl + K + C -> atalho para comentar*/
+    width: 50%;
+    display: flex;
+    justify-content:center;
+    gap: 16px;
+    border: 2px solid var(--cor-azul);
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 7px 10px;
+    text-decoration: none;
+    color: var(--cor-azul);
+    font-family: var(--fonte-Montserrat);
+}
+
+.apresentacao__subtitulo::after {
+    content: ''; /* Criando um elemento pseudo para o sublinhado */
+    position: absolute; /* Posicionando o sublinhado em relação ao link */
+    bottom: 0; /* Posicionando o sublinhado na parte inferior do link */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Altura do sublinhado */
+    background-color: #cae2a5ee; /* Cor do sublinhado */
+    opacity: 0; /* Tornando-o invisível inicialmente */
+    transition: opacity 0.3s; /* Adicionando transição para um efeito suave */
+}
+
+.apresentacao__subtitulo:hover::after {
+    opacity: 1; /* Tornando o sublinhado visível ao passar o cursor sobre o link */
+}
+
+.apresentacao__links:hover {
+    background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem {
+    width: 50%;
+}
+
+.rodape {
+    color: var(--cor-preto);
+    background-color: var(--cor-azul);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-KronaOne);
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 8%;
+    }
+
+    .cabecalho__menu {
+        justify-content:center;
+    }
+    
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 8%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
